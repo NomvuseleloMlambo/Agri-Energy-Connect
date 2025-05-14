@@ -75,7 +75,7 @@ EDB. (2024). Beautiful view green farm field. [electronic print]. Available at: 
 Stackoverflow. (2017). Can't add Migration in Visual Studio for entityFrameworkcore [Online]. Available at: https://stackoverflow.com/questions/45187224/cant-add-migration-in-visual-studio-code-for-entityframeworkcore [Accessed 12 May 2025].
 Seedterra. ([s.a.]). Spinach Bloomsdale Non GMO seeds - Spinach Oleracea. [electronic print]. Available at: https://seedterra.com/malabar-spinach-red-stem-non-gmo-seeds---basella-rubra/ [Accessed 13 May 2025].
 Fresh California Fruit. ([s.a.]). Yellow Peaches. [electronic print]. Available at: https://www.freshcaliforniafruit.com/shop-online/peaches/yellow-peaches/organic-yellow-clingstone-peaches/ [Accessed 13 May 2025].
-iStock. (2016). Corn in Burlap bag isolated on white. [electronic print]. Available at: https://www.istockphoto.com/es/foto/ma%C3%ADz-en-bolsa-de-arpillera-aislado-sobre-blanco-gm589938508-101311779 []Accessed 13 May 2025 .
+iStock. (2016). Corn in Burlap bag isolated on white. [electronic print]. Available at: https://www.istockphoto.com/es/foto/ma%C3%ADz-en-bolsa-de-arpillera-aislado-sobre-blanco-gm589938508-101311779 []Accessed 13 May 2025.
 OpenAI (2025). ChatGPT explained how to link project to database. [App]. Available at: https://chatgpt.com/ [Accessed 12 May 2025]
 OpenAI (2025). ChatGPT explained link views to other views. [App]. Available at: https://chatgpt.com/ [Accessed 12 May 2025]
    
