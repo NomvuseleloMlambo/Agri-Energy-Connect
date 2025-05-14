@@ -1,4 +1,4 @@
-﻿ST10264503
+﻿ST10264503 - Nomvuselelo Akhona Mlambo
 
 Github repo link: https://github.com/NomvuseleloMlambo/Agri-Energy-Connect.git
 
@@ -45,13 +45,15 @@ The system uses a single database for all data
 Uploaded images are stored in the /wwroot/uploads folder
 Role-based access ensures users only see the pages relevant to them.
 
-Sample usage guide: 
+Sample usage guide:
+
 Register a new employee
 Log in as the employee and add a new farmer.
 Go back, and log in as the farmer using the credentials created.
 Add a new product, view it under View My Products.
 Navigate to the forum, create and view posts.
 Log back in as the employee to View All Products and applu filters.
+
 
 Sample data you can use:
 
