@@ -1,0 +1,156 @@
+﻿@model IEnumerable<AgriEnergyConnect.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>All Products</title>
+    <style>
+        body {
+            background-image: url('/images/beautiful-view-green-farm-field-600nw-2470800699.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: white;
+        }
+
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+            form div {
+                margin-bottom: 10px;
+            }
+
+        input, select {
+            padding: 8px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+            color: black;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .no-products {
+            text-align: center;
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h2>All Products</h2>
+
+        <form method="get">
+            <div>
+                <label for="farmerUsername">Farmer Username:</label><br />
+                <input type="text" name="farmerUsername" id="farmerUsername" placeholder="Enter farmer username" />
+            </div>
+
+            <div>
+                <label for="category">Category:</label><br />
+                <input type="text" name="category" id="category" placeholder="Enter category" />
+            </div>
+
+            <div>
+                <label for="fromDate">From:</label><br />
+                <input type="date" name="fromDate" id="fromDate" />
+            </div>
+
+            <div>
+                <label for="toDate">To:</label><br />
+                <input type="date" name="toDate" id="toDate" />
+            </div>
+
+            <div style="align-self: flex-end;">
+                <button type="submit">Filter</button>
+            </div>
+        </form>
+
+        @if (!Model.Any())
+        {
+            <p class="no-products">No products available.</p>
+        }
+        else
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Production Date</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Name</td>
+                            <td>@product.Category</td>
+                            <td>@product.ProductionDate.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(product.ImageFileName))
+                                {
+                                    <img src="/uploads/@product.ImageFileName" alt="Product Image" style="width:80px;height:80px;object-fit:cover;" />
+                                }
+                                else
+                                {
+                                    <span style="color:gray;">No image</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</body>
+</html>

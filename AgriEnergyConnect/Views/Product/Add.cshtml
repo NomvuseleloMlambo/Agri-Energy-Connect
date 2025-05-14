@@ -1,0 +1,103 @@
+﻿@model AgriEnergyConnect.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add Product</title>
+    <style>
+        body {
+            background-image: url('/images/beautiful-view-green-farm-field-600nw-2470800699.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #218838;
+            }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .validation {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: lightgreen;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .info {
+            color: lightblue;
+            font-size: 0.9em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2 style="text-align: center;">Add New Product</h2>
+        @Html.ValidationSummary(true, "", new { @class = "validation" }) 
+        <form asp-controller="Product" asp-action="Add" method="post" enctype="multipart/form-data">
+            <label>Product Name:</label>
+            <input asp-for="Name" autocomplete="off" value="" />
+            <span asp-validation-for="Name" class="validation"></span>
+
+            <label>Category:</label>
+            <input asp-for="Category" autocomplete="off" value="" />
+            <span asp-validation-for="Category" class="validation"></span>
+
+            <label>Production Date:</label>
+            <input asp-for="ProductionDate" type="date" />
+            <span asp-validation-for="ProductionDate" class="validation"></span>
+
+            <label>Product Image:</label>
+            <input type="file" name="productImage" accept="image/*" />
+
+            <button type="submit">Add Product</button>
+        </form>
+
+        @if (ViewBag.Message != null)
+        {
+            <p class="success">@ViewBag.Message</p>
+        }
+    </div>
+</body>
+</html>

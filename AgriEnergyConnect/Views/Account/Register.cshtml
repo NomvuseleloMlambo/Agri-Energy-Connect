@@ -1,0 +1,81 @@
+﻿@model AgriEnergyConnect.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Employee Register</title>
+    <style>
+        body {
+            background-image: url('/images/beautiful-view-green-farm-field-600nw-2470800699.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .form-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .validation {
+            color: red;
+        }
+
+        .success {
+            color: lightgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Employee Registration</h2>
+
+        <form asp-action="Register" method="post">
+            <label>Username</label>
+            <input asp-for="Username" />
+            <span asp-validation-for="Username" class="validation"></span>
+
+            <label>Password</label>
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password" class="validation"></span>
+
+            <button type="submit">Register</button>
+        </form>
+
+        @if (TempData["Message"] != null)
+        {
+            <p class="success">@TempData["Message"]</p>
+        }
+    </div>
+</body>
+</html>

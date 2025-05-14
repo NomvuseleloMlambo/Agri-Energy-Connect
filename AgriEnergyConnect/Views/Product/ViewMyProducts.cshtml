@@ -1,0 +1,104 @@
+﻿@model IEnumerable<AgriEnergyConnect.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Products</title>
+    <style>
+        body {
+            background-image: url('/images/beautiful-view-green-farm-field-600nw-2470800699.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: white;
+        }
+
+        .table-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+            color: black;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .no-products {
+            text-align: center;
+            color: lightgray;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>My Products</h2>
+
+        @if (!Model.Any())
+        {
+            <p class="no-products">No products added yet.</p>
+        }
+        else
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Production Date</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Name</td>
+                            <td>@product.Category</td>
+                            <td>@product.ProductionDate.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(product.ImageFileName))
+                                {
+                                    <img src="/uploads/@product.ImageFileName" alt="Product Image" style="width:80px;height:80px;object-fit:cover;" />
+                                }
+                                else
+                                {
+                                    <span style="color:gray;">No image</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</body>
+</html>

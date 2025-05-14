@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sustainable Farming Hub</title>
+    <style>
+        body {
+            background-image: url('/images/beautiful-view-green-farm-field-600nw-2470800699.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 40px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .best-practices {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .practice-card {
+            background-color: white;
+            color: black;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            min-width: 250px;
+            box-sizing: border-box;
+        }
+
+        .forum-button {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+            .forum-button a {
+                display: inline-block;
+                padding: 12px 25px;
+                background-color: #28a745;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 1em;
+            }
+
+                .forum-button a:hover {
+                    background-color: #218838;
+                }
+
+        @@media (max-width: 800px) {
+            .practice-card {
+                width: 100%;
+            }
+        }
+
+
+        {
+            width: 100%;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sustainable Farming Hub</h1>
+        <div class="intro">
+            Explore proven techniques that help improve farm productivity while protecting natural resources and preserving soil and water health.
+        </div>
+
+        <div class="best-practices">
+            <div class="practice-card">
+                <h3>Crop Rotation</h3>
+                <p>Rotating different crops in the same field helps balance nutrients in the soil and prevents pest buildup, promoting long-term soil health.</p>
+            </div>
+
+            <div class="practice-card">
+                <h3>Drip Irrigation</h3>
+                <p>This water-efficient method delivers moisture directly to plant roots, reducing evaporation and conserving water in dry climates.</p>
+            </div>
+
+            <div class="practice-card">
+                <h3>Composting</h3>
+                <p>Compost improves soil structure and fertility using organic waste like crop residue and animal manure, reducing the need for chemical fertilizers.</p>
+            </div>
+
+            <div class="practice-card">
+                <h3>Cover Cropping</h3>
+                <p>Growing cover crops like legumes during off-seasons protects soil from erosion and enhances organic matter in the field.</p>
+            </div>
+
+            <div class="practice-card">
+                <h3>Integrated Pest Management</h3>
+                <p>Using natural predators and crop monitoring reduces chemical pesticide use, maintaining ecological balance and crop health.</p>
+            </div>
+        </div>
+
+        <div class="forum-button">
+            <a href="/Forum/Index">Join the Discussion Forum</a>
+        </div>
+    </div>
+</body>
+</html>
