@@ -6,13 +6,16 @@ Tools used
 DB Browser SQLite
 
 
-1. Download/Open the project, update database then run the application
+1. Download/Open the project, build the project (Build > Build Solution).
 
-2. On visual studio press the green start button to run the project
+2. Update database (Tools > NuGet Package Manager > Package Manager Console)
+   in the cconsole run the following: Update-Database
 
-3. On the first page select a role from the drop down.
+3. Run application by pressing the green start button. 
 
-4. Employee
+4. On the first page select a role from the drop down.
+
+5. Employee
    Are able to register themselves via the register page (first time only).
    Can then login using their credentials.
    Can access the employee dashboard which allows the to:
@@ -20,7 +23,7 @@ DB Browser SQLite
        View all products submitted by all farmers.
        Can also filter the products by date, category, or farmer username.
        
-5. Farmer
+6. Farmer
    Are added by employees and can managed their own products.
    They log in using credentials provided by the employee
    Can access the farmer dashboard which allows them to:
@@ -29,7 +32,7 @@ DB Browser SQLite
        access the sustainable farming hub
        can join the discussion forum where they can create and view posts.
 
-6. Discussion forum 
+7. Discussion forum 
    Accessible only to logged in farmers
    Users can:
       View all forum posts
@@ -37,7 +40,7 @@ DB Browser SQLite
       Can view who posted and when.
    It is accessible through the farmer dashboard and the sustainable farming hub
 
-7. Sustainable farming hub
+8. Sustainable farming hub
    Contains conent with the best farming practices 
    Button to access the forum where farmers can interact
 
